@@ -1,0 +1,121 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: url(./hanu.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-color: #f9faed;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Page Title */
+h1 {
+    font-size: 2rem;
+    color: #d32f2f;
+    margin-bottom: 10px;
+}
+
+/* Author, Language, and Translation info */
+p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+#closingVerse {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #e9d6b7;
+    border-left: 4px solid #d32f2f;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #d32f2f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b71c1c;
+    box-shadow: 2px 2px 5px #460404;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 3px #460404;
+}
+.result {
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: #e0f7fa;
+    border: 1px solid #4dd0e1;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    color: #004d40;
+}
+
+.result p {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 600px) {
+    body{
+        background-position: top;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+.description{
+    background-color: rgba(0, 0, 0, 0.39);
+    padding: 5px;
+    border-radius: 3px;
+    color: #ffffff;
+}
+    input[type="number"],
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .result {
+        font-size: 1rem;
+    }
+}
