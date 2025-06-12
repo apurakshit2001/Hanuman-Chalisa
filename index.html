@@ -20,7 +20,10 @@
 
     <div class="container">
         <input type="number" name="line" id="line" placeholder="Enter line number..">
-        <button onclick="getLine()">Get Line</button>
+        <div class="btns">
+            <button onclick="getLine()">Get Line</button><button id="speakBtn" style="display:none;">🔊 Speak</button>
+        </div>
+
     </div>
     <div class="result" id="result"></div>
 </body>
