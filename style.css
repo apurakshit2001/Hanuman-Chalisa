@@ -78,6 +78,7 @@ button:active {
     transform: translateY(2px);
     box-shadow: 1px 1px 3px #460404;
 }
+
 .result {
     font-size: 1.1rem;
     padding: 15px;
@@ -94,20 +95,44 @@ button:active {
     margin-bottom: 10px;
 }
 
+#speakBtn {
+    /* margin-top: 10px; */
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #388e3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#speakBtn:hover {
+    background-color: #2e7d32;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 @media (max-width: 600px) {
-    body{
+    body {
         background-position: top;
     }
+
     h1 {
         font-size: 1.8rem;
     }
-.description{
-    background-color: rgba(0, 0, 0, 0.39);
-    padding: 5px;
-    border-radius: 3px;
-    color: #ffffff;
-}
+
+    .description {
+        background-color: rgba(0, 0, 0, 0.39);
+        padding: 5px;
+        border-radius: 3px;
+        color: #ffffff;
+    }
+
     input[type="number"],
     button {
         width: 100%;
