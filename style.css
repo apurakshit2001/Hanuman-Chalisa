@@ -26,9 +26,14 @@ h1 {
     font-size: 2rem;
     color: #d32f2f;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Author, Language, and Translation info */
+.description {
+    margin-bottom: 10px;
+}
+
 p {
     font-size: 1rem;
     margin-bottom: 5px;
@@ -41,13 +46,17 @@ p {
     padding: 10px;
     background-color: #e9d6b7;
     border-left: 4px solid #d32f2f;
+    max-width: 600px;
 }
 
+/* Input and button container */
 .container {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 input[type="number"] {
@@ -58,15 +67,19 @@ input[type="number"] {
     width: 200px;
 }
 
-button {
+/* Button styles */
+button, #speakBtn, #playAllBtn, #pauseBtn {
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #d32f2f;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button {
+    background-color: #d32f2f;
 }
 
 button:hover {
@@ -79,6 +92,33 @@ button:active {
     box-shadow: 1px 1px 3px #460404;
 }
 
+/* Speak Button */
+#speakBtn {
+    background-color: #388e3c;
+}
+
+#speakBtn:hover {
+    background-color: #2e7d32;
+}
+
+/* Play All and Pause Buttons */
+#playAllBtn {
+    background-color: #1976d2;
+}
+
+#playAllBtn:hover {
+    background-color: #0d47a1;
+}
+
+#pauseBtn {
+    background-color: #f57c00;
+}
+
+#pauseBtn:hover {
+    background-color: #e65100;
+}
+
+/* Result box */
 .result {
     font-size: 1.1rem;
     padding: 15px;
@@ -95,52 +135,73 @@ button:active {
     margin-bottom: 10px;
 }
 
-#speakBtn {
-    /* margin-top: 10px; */
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #388e3c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#speakBtn:hover {
-    background-color: #2e7d32;
-}
-
+/* Button group */
 .btns {
     display: flex;
     align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-@media (max-width: 600px) {
+/* Responsive Styling */
+@media (max-width: 768px) {
     body {
         background-position: top;
+        padding: 10px;
+        justify-content: flex-start;
     }
 
     h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .description {
         background-color: rgba(0, 0, 0, 0.39);
-        padding: 5px;
-        border-radius: 3px;
+        padding: 10px;
+        border-radius: 5px;
         color: #ffffff;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
     }
 
-    input[type="number"],
-    button {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
         width: 100%;
-        padding: 10px;
-        font-size: 0.9rem;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    button, #speakBtn, #playAllBtn, #pauseBtn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 12px;
     }
 
     .result {
         font-size: 1rem;
+        padding: 10px;
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    #closingVerse {
+        font-size: 1rem;
+        width: 100%;
+        max-width: 500px;
     }
 }
